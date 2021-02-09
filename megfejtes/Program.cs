@@ -100,7 +100,20 @@ namespace megfejtes
 
         static void Harmadik()
         {
+            int szamlal = 0;
 
+            for (int i = 0; i < rejtveny.GetLength(0); i++)
+            {
+                for (int j = 0; j < rejtveny.GetLength(1); j++)
+                {
+                    if (rejtveny[i, j] == ' ')
+                    {
+                        szamlal++;
+                    }
+                }
+            }
+
+            Console.WriteLine(szamlal + " darab karakter hiányzik még a rejtvényből.");
         }
 
         static void Negyedik()
