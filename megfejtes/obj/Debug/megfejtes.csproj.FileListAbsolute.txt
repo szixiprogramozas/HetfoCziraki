@@ -1,0 +1,7 @@
+C:\Users\Soma\source\repos\megfejtes\megfejtes\bin\Debug\megfejtes.exe.config
+C:\Users\Soma\source\repos\megfejtes\megfejtes\bin\Debug\megfejtes.exe
+C:\Users\Soma\source\repos\megfejtes\megfejtes\bin\Debug\megfejtes.pdb
+C:\Users\Soma\source\repos\megfejtes\megfejtes\obj\Debug\megfejtes.csprojAssemblyReference.cache
+C:\Users\Soma\source\repos\megfejtes\megfejtes\obj\Debug\megfejtes.csproj.CoreCompileInputs.cache
+C:\Users\Soma\source\repos\megfejtes\megfejtes\obj\Debug\megfejtes.exe
+C:\Users\Soma\source\repos\megfejtes\megfejtes\obj\Debug\megfejtes.pdb
