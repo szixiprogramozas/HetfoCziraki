@@ -18,6 +18,7 @@ namespace megfejtes
         {
             const string eleresiut = @"rejtveny.txt";
             const string szavakut = @"szavak.txt";
+            const string mentesut = @"megoldas.txt";
 
             Console.WriteLine("1. feladat:");
             Elso(eleresiut);
@@ -38,6 +39,9 @@ namespace megfejtes
 
             Console.WriteLine("\n6. feladat:");
             Hatodik();
+
+            Console.WriteLine("\n7. feladat:");
+            Hetedik(szavakut, mentesut);
 
             Console.ReadKey();
         }
@@ -171,9 +175,30 @@ namespace megfejtes
             }
         }
 
-        static void Hetedik()
+        static void Hetedik(string eleresiut, string mentes)
         {
+            StreamWriter fajl = new StreamWriter(mentes);
 
+            foreach (var item in rejtvenyszo)
+            {
+                bool hianyos = false;
+
+                for (int i = 0; i < item.Length; i++)
+                {
+                    if (item[i] == ' ')
+                    {
+                        hianyos = true;
+                    }
+                }
+
+                if (hianyos)
+                {
+                    fajl.WriteLine(Kereses(eleresiut, item));
+                }
+            }
+
+            fajl.Flush();
+            fajl.Close();
         }
 
         static void Nyolcadik()
@@ -196,6 +221,36 @@ namespace megfejtes
             }
 
             return szerepel;
+        }
+        static string Kereses(string eleresiut, string szo)
+        {
+            StreamReader fajl = new StreamReader(eleresiut);
+            bool hianyos = false;
+            string megoldas = "";
+            string sor = "";
+
+            while ((sor = fajl.ReadLine()) != null)
+            {
+                int helyes = 0;
+
+                if (sor.Length == szo.Length)
+                {
+                    for (int j = 0; j < szo.Length; j++)
+                    {
+                        if (szo[j] == ' ' || sor[j] == szo[j])
+                        {
+                            helyes++;
+                        }
+                    }
+                }
+
+                if (helyes == szo.Length)
+                {
+                    megoldas = sor;
+                }
+            }
+
+            return megoldas;
         }
     }
 }
