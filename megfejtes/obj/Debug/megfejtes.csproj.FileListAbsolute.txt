@@ -19,3 +19,10 @@ C:\Users\mamak\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\obj\Debug\me
 C:\Users\mamak\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\obj\Debug\megfejtes.csproj.CoreCompileInputs.cache
 C:\Users\mamak\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\obj\Debug\megfejtes.exe
 C:\Users\mamak\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\obj\Debug\megfejtes.pdb
+C:\Users\Andris\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\bin\Debug\megfejtes.exe.config
+C:\Users\Andris\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\bin\Debug\megfejtes.exe
+C:\Users\Andris\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\bin\Debug\megfejtes.pdb
+C:\Users\Andris\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\obj\Debug\megfejtes.csprojAssemblyReference.cache
+C:\Users\Andris\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\obj\Debug\megfejtes.csproj.CoreCompileInputs.cache
+C:\Users\Andris\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\obj\Debug\megfejtes.exe
+C:\Users\Andris\Source\Repos\szixiprogramozas\HetfoCziraki\megfejtes\obj\Debug\megfejtes.pdb

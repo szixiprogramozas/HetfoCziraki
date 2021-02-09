@@ -28,10 +28,14 @@ namespace megfejtes
             Console.WriteLine("\n3. feladat:");
             Harmadik();
 
+            Console.WriteLine("\n4. feladat:");
+            Negyedik();
+
             Console.WriteLine("\n5. feladat:");
             Console.Write("Adjon meg egy szót: ");
             string szo = Console.ReadLine();
             Otodik(szo);
+
 
             Console.ReadKey();
         }
@@ -126,7 +130,20 @@ namespace megfejtes
 
         static void Negyedik()
         {
+            int[] tabla = new int[rejtveny.GetLength(0)];
 
+            for (int i = 0; i < rejtveny.GetLength(0); i++)
+            {
+                for (int j = 0; j < rejtveny.GetLength(1); j++)
+                {
+                    if (rejtveny[i, j] == ' ')
+                    {
+                        tabla[i]++;
+                    }
+                }
+            }
+
+            Console.WriteLine("A legtöbb hiányzó betű a {0}. sorban van.", tabla.ToList().IndexOf(tabla.Max()) + 1);
         }
 
         static void Otodik(string szo)
