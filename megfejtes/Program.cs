@@ -25,6 +25,9 @@ namespace megfejtes
             Console.WriteLine("\n2. feladat:");
             Masodik(szavakut);
 
+            Console.WriteLine("\n3. feladat:");
+            Harmadik();
+
             Console.ReadKey();
         }
 
