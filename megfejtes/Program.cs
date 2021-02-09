@@ -12,13 +12,18 @@ namespace megfejtes
     {
         static char[,] rejtveny;
         static List<string> rejtvenyszo = new List<string>();
+        static List<string> szavak = new List<string>();
 
         static void Main(string[] args)
         {
             const string eleresiut = @"rejtveny.txt";
+            const string szavakut = @"szavak.txt";
 
             Console.WriteLine("1. feladat:");
             Elso(eleresiut);
+
+            Console.WriteLine("\n2. feladat:");
+            Masodik(szavakut);
 
             Console.ReadKey();
         }
@@ -77,9 +82,20 @@ namespace megfejtes
             }
         }
 
-        static void Masodik()
+        static void Masodik(string eleresiut)
         {
+            StreamReader fajl = new StreamReader(eleresiut);
+            string sor = "";
 
+            while ((sor = fajl.ReadLine()) != null)
+            {
+                szavak.Add(sor);
+            }
+
+            foreach (string szo in szavak)
+            {
+                Console.WriteLine(szo);
+            }
         }
 
         static void Harmadik()
