@@ -36,6 +36,8 @@ namespace megfejtes
             string szo = Console.ReadLine();
             Otodik(szo);
 
+            Console.WriteLine("\n6. feladat:");
+            Hatodik();
 
             Console.ReadKey();
         }
@@ -160,7 +162,13 @@ namespace megfejtes
 
         static void Hatodik()
         {
-
+            foreach (var item in rejtvenyszo)
+            {
+                if (Szerepel(szavak, item))
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
 
         static void Hetedik()
@@ -172,6 +180,7 @@ namespace megfejtes
         {
 
         }
+
         static bool Szerepel(List<string> kereses, string szo)
         {
             bool szerepel = false;
