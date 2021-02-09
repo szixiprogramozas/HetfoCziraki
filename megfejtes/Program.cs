@@ -43,6 +43,9 @@ namespace megfejtes
             Console.WriteLine("\n7. feladat:");
             Hetedik(szavakut, mentesut);
 
+            Console.WriteLine("\n8. feladat:");
+            Nyolcadik(szavakut, rejtvenyszo, szavak);
+
             Console.ReadKey();
         }
 
@@ -201,9 +204,33 @@ namespace megfejtes
             fajl.Close();
         }
 
-        static void Nyolcadik()
+        static void Nyolcadik(string eleresiut, List<string> rejtvenyszo, List<string> szavak)
         {
+            List<string> hasznalt = new List<string>();
 
+            foreach (var item in rejtvenyszo)
+            {
+                string keres = Kereses(eleresiut, item);
+
+                if (keres == "")
+                {
+                    hasznalt.Add(item);
+                }
+                else
+                {
+                    hasznalt.Add(keres);
+                }
+            }
+
+            foreach (var item in hasznalt)
+            {
+                szavak.Remove(item);
+            }
+
+            foreach (var item in szavak)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         static bool Szerepel(List<string> kereses, string szo)
@@ -222,6 +249,7 @@ namespace megfejtes
 
             return szerepel;
         }
+
         static string Kereses(string eleresiut, string szo)
         {
             StreamReader fajl = new StreamReader(eleresiut);
