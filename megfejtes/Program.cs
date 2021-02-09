@@ -28,6 +28,11 @@ namespace megfejtes
             Console.WriteLine("\n3. feladat:");
             Harmadik();
 
+            Console.WriteLine("\n5. feladat:");
+            Console.Write("Adjon meg egy szót: ");
+            string szo = Console.ReadLine();
+            Otodik(szo);
+
             Console.ReadKey();
         }
 
@@ -124,9 +129,16 @@ namespace megfejtes
 
         }
 
-        static void Otodik()
+        static void Otodik(string szo)
         {
-
+            if (Szerepel(szavak, szo) && Szerepel(rejtvenyszo, szo))
+            {
+                Console.WriteLine("Igen");
+            }
+            else
+            {
+                Console.WriteLine("Nem");
+            }
         }
 
         static void Hatodik()
@@ -142,6 +154,22 @@ namespace megfejtes
         static void Nyolcadik()
         {
 
+        }
+        static bool Szerepel(List<string> kereses, string szo)
+        {
+            bool szerepel = false;
+
+            szo = szo.ToUpper();
+
+            foreach (var item in kereses)
+            {
+                if (kereses.Contains(szo))
+                {
+                    szerepel = true;
+                }
+            }
+
+            return szerepel;
         }
     }
 }
